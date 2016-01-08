@@ -2,9 +2,6 @@
   (:use midje.sweet)
   (:use [bowling.core]))
 
-
-;.;. The right word may be effective, but no word was ever as effective as
-;.;. a rightly timed pause. -- Twain
 (facts "about `bowling-scoring`"
   (fact "should add up all numbers if it is just basic score keeping"
     (bowling-scoring "1 2 3 4") => 10)
@@ -19,6 +16,6 @@
     (bowling-scoring "10 10 10 10 10 10 10 10 10 10 10 10") => 300)
   
   (fact "should score 279 pins when the first nine frames are strike but the tenth is spare"
-    (bowling-scoring "10 10 10 10 10 10 10 10 10 9 1 10") => 279)  )
+    (bowling-scoring "10 10 10 10 10 10 10 10 10 9 1 10") => 279))
 
 
