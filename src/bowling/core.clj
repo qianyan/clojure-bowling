@@ -2,6 +2,11 @@
 
 (def STRIKE 10)
 
+(defn validate [xs]
+  (if (some #(< 10 (apply + %)) xs)
+    (throw (Exception. "invalid input sequence!"))
+    xs))
+
 (defn bowling-scoring [sequence]
   (->> sequence
        (re-seq #"\d+")
@@ -11,6 +16,7 @@
                    (conj xs x 0)
                    (conj xs x))) [])
        (partition 2)
+       (validate)
        (map (fn [[f s]]
               (cond
                 (= STRIKE f) [10 \x \y]

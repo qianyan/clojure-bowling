@@ -6,7 +6,7 @@ this is a bowling scoring program
 - [x] strike
 - [x] strike bonus
 - [x] spare bonus
-- [ ] validation for input sequence
+- [x] validate input sequence
 
 ## How to run the tests
 
