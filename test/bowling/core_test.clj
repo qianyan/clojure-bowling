@@ -17,8 +17,11 @@
   
   (fact "should score 279 pins when the first nine frames are strike but the tenth is spare"
     (bowling-scoring "10 10 10 10 10 10 10 10 10 9 1 10") => 279)
-  
+
   (fact "should validate input score sequence"
-    (fact (bowling-scoring "3 8 1 2") => (throws Exception "invalid input sequence!"))))
+    (fact (bowling-scoring "3 8 1 2") => (throws Exception "invalid input sequence!")))
+
+  (fact "should throw assertion error if input score sequrence is empty"
+    (fact (bowling-scoring "") => (throws AssertionError))))
 
 

@@ -8,6 +8,7 @@
     xs))
 
 (defn bowling-scoring [sequence]
+  {:pre [(not-empty sequence)]}
   (->> sequence
        (re-seq #"\d+")
        (map read-string)
